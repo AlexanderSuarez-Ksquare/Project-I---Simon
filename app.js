@@ -9,6 +9,12 @@ class SimonSays {
     this.blockedButtons = true;
     this.buttons = Array.from(simonButtons);
     this.startButton = startButton;
+    this.buttonSounds = [
+      new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"),
+      new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"),
+      new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"),
+      new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"),
+    ];
   }
   init() {
     this.startButton.onclick = () => this.startGame();
@@ -39,6 +45,7 @@ class SimonSays {
   }
   validateChosenColor(value) {
     if (this.sequence[this.userPosition] === value) {
+      this.buttonSounds[value].play();
       if (this.round === this.userPosition) {
         this.updateRound(this.round + 1);
         this.isGameOver();
