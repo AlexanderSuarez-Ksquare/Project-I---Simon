@@ -23,11 +23,12 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px #888;
 }
-.square:active {
+.square:active,
+.active {
   filter: brightness(125%);
 }
 
-.start-button {
+#startButton {
   margin-top: 20px;
   font-size: 20px;
   padding: 10px 20px;
@@ -35,6 +36,10 @@ body {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#startButton:disabled {
+  background-color: #eee;
 }
 
 #red {
