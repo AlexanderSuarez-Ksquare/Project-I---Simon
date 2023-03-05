@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  margin: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #888;
+}
+.square:active {
+  filter: brightness(125%);
+}
+
+#red {
+  background-color: rgb(221, 34, 34);
+}
+
+#blue {
+  background-color: rgb(34, 34, 218);
+}
+
+#green {
+  background-color: rgb(16, 128, 16);
+}
+
+#yellow {
+  background-color: rgb(231, 231, 53);
+}
